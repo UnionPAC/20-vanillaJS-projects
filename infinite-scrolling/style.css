@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #8DA1B9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 100px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #193f74;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+
+.filter {
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+}
+
+.filter:focus {
+    outline: none;
+}
+
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 55%;
+    margin-top: 20px;
+}
+
+.post {
+    background-color: #05386B;
+    color: #EDF5E1;
+    margin: 20px 0;
+    padding: 10px 20px 20px;
+    position: relative;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.post-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-left: 5px;
+}
+
+.post-content {
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+
+.number {
+    background-color: #EDF5E1;
+    color: #05386B;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -40%);
+    font-weight: 700;
+}
+
+.loader {
+    opacity: 0;
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    transition: opacity 0.3s ease-in;
+}
+
+.loader.show {
+    opacity: 1;
+}
+
+.circle {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    margin: 7px;
+    border: none;
+    border-radius: 50%;
+    animation: bounce 0.5s ease-in infinite;
+}
+
+.circle:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.circle:nth-of-type(3) {
+    animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
